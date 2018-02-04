@@ -10,7 +10,10 @@ function getIssues() {
 }
 
 function showIssues(json) {
-  json.forEach(issue => ($("#issues").innerHTML += `<li>${issue.body}</li>`));
+  json.forEach(
+    issue =>
+      (document.getElementById("issues").innerHTML += `<li>${issue.body}</li>`)
+  );
 }
 
 function createIssue() {
