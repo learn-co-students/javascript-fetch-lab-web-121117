@@ -11,17 +11,15 @@ function showResults(json) {
 function forkRepo() {
   const repo = "learn-co-curriculum/javascript-fetch-lab";
   const token = "be32af11ce6f68ecb1f5393927f50457bde70591";
-  const postData = {
-    body: "Great stuff"
-  };
 
   fetch(`https://api.github.com/repos/${repo}`, {
     method: "post",
-    body: JSON.stringify(postData),
     headers: {
-      Authorization: `token ${token}`
+      Authorization: `token ${getToken()}`
     }
-  }).then(res => console.log(res));
+  })
+    .then(res => res.json())
+    .then(json => showResults(json));
 }
 
 function getToken() {
