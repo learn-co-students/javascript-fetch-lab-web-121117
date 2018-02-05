@@ -7,7 +7,7 @@ describe('index', () => {
   before(done => {
     const html = path.resolve(__dirname, '..', 'index.html')
     const src = path.resolve(__dirname, '..', 'index.js')
-
+    console.log(src)
     jsdom.env(html, [src], (err, window) => {
       if (err) {
         return done(err)
