@@ -1,4 +1,4 @@
-const token = 'f67448ead2080de2321fe6ba424e0f76a4594db7'
+const token = ''
 
 function getIssues() {
   fetch('https://api.github.com/repos/The-Endless-Bummer/javascript-fetch-lab/issues', {
